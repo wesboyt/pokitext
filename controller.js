@@ -7,9 +7,9 @@ const response = await fetch('./index.angular.5d.ann');
 const ab = await response.arrayBuffer();
 const u8a = new Uint8Array(ab)
 
-document.getElementById('submit').addEventListener('click', search)
+document.getElementById('loadIndex').addEventListener('click', initializeIndex)
 
-function search(){
+function initializeIndex(){
 let userInput = document.getElementById('dimensionInput').innerText
 
 // const u8a = Buffer.from(ab);
