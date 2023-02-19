@@ -3,18 +3,21 @@ import init, { load_index, IndexType } from "./pkg/annoy.js"
 await init(await fetch('./pkg/annoy_bg.wasm'))
 
 
+
+
 const response = await fetch('./index.angular.5d.ann');
+console.log(response)
 const ab = await response.arrayBuffer();
+console.log(ab)
 const u8a = new Uint8Array(ab)
+console.log(u8a)
+let index = load_index(u8a, 5, IndexType.angular);
+console.log(index)
 
-document.getElementById('loadIndex').addEventListener('click', initializeIndex)
 
-function initializeIndex(){
-let dimensions = document.getElementById('dimensionInput').value
+document.getElementById('searchIndex').addEventListener('click', searchIndex)
 
-// const u8a = Buffer.from(ab);
-let index = load_index(u8a, dimensions, IndexType.angular);
 
-console.log(index.get_nearest([ 1.0689810514450073, 0.5634735226631165, 0.24886439740657806, 0.7266523241996765, -0.646281898021698 ], 10, -1, true))
-
+function searchIndex(){
+    console.log(index.get_nearest([ 1.0689810514450073, 0.5634735226631165, 0.24886439740657806, 0.7266523241996765, -0.646281898021698 ], 10, -1, true))
 }
