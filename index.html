@@ -7,6 +7,8 @@
     <title>Annoy web demo</title>
     <!-- <script type="module" src="./pkg/annoy.js" ></script> -->
     <script type="module" src="controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
 </head>
 <body>
 <!-- initialize index to search -->
@@ -19,5 +21,22 @@
     <br>
     <input type="text" id="vectorToSearch" value="[ 1.0689810514450073, 0.5634735226631165, 0.24886439740657806, 0.7266523241996765, -0.646281898021698 ]">
     <input type="submit" value="Find Nearest" id="searchIndex">
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Results
+                </th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>Distance</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     </body>
 </html>
