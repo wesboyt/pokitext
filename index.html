@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annoy web demo</title>
-    <!-- <script type="module" src="./pkg/annoy.js" ></script> -->
-    <script type="module" src="controller.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
-</head>
-<body>
-<!-- initialize index to search -->
-<!-- add search function -->
-<!-- add text box, on click -> searches index for text in textbox -->
-<!-- load json file of array of api endpoints to poll-->
-<!-- Show results of search, by hitting apis found in indexes that align with search results. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Annoy web demo</title>
+        <!-- <script type="module" src="./pkg/annoy.js" ></script> -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+        <script type="module" src="controller.js"></script>
+    </head>
+    <body>
     
-    <label>Vector</label>
-    <br>
-    <input type="text" id="vectorToSearch" value="[ 1.0689810514450073, 0.5634735226631165, 0.24886439740657806, 0.7266523241996765, -0.646281898021698 ]">
-    <input type="submit" value="Find Nearest" id="searchIndex">
+        <label>Description of my crush</label>
+        <br>
+        <input type="text" id="vectorToSearch" value="Handsome, cute, freaky, strong, good kisser, rich, fast, dashing, silly, loving, cuddly." style="width:1000px">
+        <input type="submit" value="Find Nearest" id="searchIndex">
 
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Results
-                </th>
-            </tr>
-            <tr>
-                <td>ID</td>
-                <td>Distance</td>
-            </tr>
-        </thead>
-        <tbody>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Star sign
+                    </th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>Distance</td>
+                </tr>
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
     </body>
 </html>
