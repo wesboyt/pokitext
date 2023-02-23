@@ -2,7 +2,7 @@ const fs = require('fs');
 require('@tensorflow/tfjs');
 const use = require('@tensorflow-models/universal-sentence-encoder');
 let Annoy = require('annoy-node');
-const index = new Annoy.default(512,Annoy.Metric.ANGULAR);
+const index = new Annoy.default(512, Annoy.Metric.ANGULAR);
 // Load the model.
 let count = 0;
 use.load().then(model => {
