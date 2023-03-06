@@ -17,7 +17,7 @@ let model = await use.load()
 
 async function searchIndex(){
     const query = document.getElementById('vectorToSearch').value
-    const embedding = await model.embed([query])
+    const embedding = await model.embed(query)
     const processedEmbedding = new Float32Array(embedding.arraySync()[0])
     const nearest = index.get_nearest(processedEmbedding, 12, -1, true)
     const tbody = document.querySelector('tbody')
